@@ -57,12 +57,6 @@ public class SecondPage extends HttpServlet {
 		 "</FORM></CENTER></BODY></HTML>");
 	 backgroundColor = request.getParameter("BackgroundColor");
 	 foregroundColor = request.getParameter("ForegroundColor");
-		 Cookie cookieID = new LongLivedCookie("UserID", userID);
-		 response.addCookie(cookieID);
-		 Cookie cookieBack = new LongLivedCookie("BackgroundColor", backgroundColor);
-		 response.addCookie(cookieBack);
-		 Cookie cookieFore = new LongLivedCookie("ForegroundColor",foregroundColor);
-		 response.addCookie(cookieFore);
 	}
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doGet(request, response);
